@@ -1,5 +1,7 @@
 ---
 const siteTitle = "W3Cplus";
+const siteDescription = "AI 时代的前端实验室";
+const slogan = "用 AI 构建前端产品，只记录自己试过的";
 const year = new Date().getFullYear();
 ---
 
@@ -9,31 +11,48 @@ const year = new Date().getFullYear();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="W3Cplus — Coming Soon" />
-    <title>{siteTitle}</title>
+    <meta name="description" content={siteDescription} />
+    <title>{siteTitle} — {siteDescription}</title>
   </head>
   <body>
-    <header>
-      <span class="logo">W3Cplus</span>
-    </header>
-
     <main>
-      <div class="center">
-        <h1>Coming Soon</h1>
-        <p class="desc">
-          W3Cplus 正在改版中，即将以全新面貌回归。
-        </p>
-        <p class="desc">
-          这次我们聚焦一件事：AI 时代的前端开发，到底该怎么玩。
-        </p>
-      </div>
+      <!-- Hero -->
+      <section class="hero">
+        <p class="badge">2026 · 重新出发</p>
+        <h1>W3Cplus</h1>
+        <p class="tagline">{siteDescription}</p>
+        <p class="slogan">{slogan}</p>
+        <div class="hero-actions">
+          <a href="mailto:airenliao@gmail.com" class="btn btn-primary">联系我</a>
+          <a href="https://github.com/Airen/w3cplus-ai" class="btn btn-ghost">GitHub</a>
+        </div>
+      </section>
+
+      <!-- Coming Soon -->
+      <section class="section">
+        <div class="coming-soon">
+          <h2>Coming Soon</h2>
+          <p>W3Cplus 正在改版中，即将以全新面貌回归。</p>
+          <p>这次我们聚焦一件事：AI 时代的前端开发，到底该怎么玩。</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; {year} {siteTitle}. Powered by Astro, deployed on Cloudflare.</p>
+      </footer>
     </main>
 
-    <footer>
-      <p>&copy; {year} {siteTitle}</p>
-    </footer>
-
     <style>
+      :root {
+        --bg: #0a0a0a;
+        --fg: #f0f0f0;
+        --muted: #777;
+        --muted-2: #aaa;
+        --accent: #00ff88;
+        --accent-dim: #00cc6e;
+        --border: #222;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -41,73 +60,134 @@ const year = new Date().getFullYear();
       }
 
       body {
-        background: #0a0a0a;
-        color: #f0f0f0;
+        background: var(--bg);
+        color: var(--fg);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
           "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        line-height: 1.7;
         -webkit-font-smoothing: antialiased;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      header {
-        padding: 24px 32px;
-        border-bottom: 1px solid #1a1a1a;
-      }
-
-      .logo {
-        font-size: 1.1rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: #f0f0f0;
       }
 
       main {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 24px;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px;
       }
 
-      .center {
-        text-align: center;
-        max-width: 500px;
+      /* Hero */
+      .hero {
+        padding: 100px 0 60px;
       }
 
-      h1 {
-        font-size: 3.5rem;
+      .badge {
+        display: inline-block;
+        font-size: 0.8rem;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 28px;
+        letter-spacing: 0.05em;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
         font-weight: 800;
         letter-spacing: -0.03em;
-        margin-bottom: 28px;
+        margin-bottom: 12px;
         background: linear-gradient(135deg, #f0f0f0 0%, #00ff88 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
-      .desc {
+      .tagline {
+        font-size: 1.4rem;
+        color: var(--fg);
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .slogan {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 24px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: #000;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background: var(--accent-dim);
+      }
+
+      .btn-ghost {
+        border: 1px solid var(--border);
+        color: var(--muted-2);
+      }
+
+      .btn-ghost:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      /* Coming Soon */
+      .section {
+        padding: 60px 0;
+        border-top: 1px solid var(--border);
+        text-align: center;
+      }
+
+      .coming-soon h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+        color: var(--accent);
+      }
+
+      .coming-soon p {
         font-size: 1.05rem;
-        color: #888;
+        color: var(--muted-2);
         line-height: 1.8;
         margin-bottom: 8px;
       }
 
+      /* Footer */
       footer {
-        padding: 20px 32px;
-        border-top: 1px solid #1a1a1a;
+        padding: 40px 0 50px;
+        border-top: 1px solid var(--border);
         text-align: center;
       }
 
       footer p {
         font-size: 0.8rem;
-        color: #555;
+        color: var(--muted);
       }
 
+      /* Responsive */
       @media (max-width: 640px) {
-        h1 { font-size: 2.4rem; }
-        .desc { font-size: 0.95rem; }
+        .hero { padding: 70px 0 40px; }
+        .hero h1 { font-size: 2.4rem; }
+        .tagline { font-size: 1.15rem; }
+        .coming-soon h2 { font-size: 1.8rem; }
       }
     </style>
   </body>
