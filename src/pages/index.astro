@@ -1,22 +1,5 @@
 ---
 const siteTitle = "W3Cplus";
-const siteDescription = "AI 时代的前端实验室";
-const slogan = "用 AI 构建前端产品，只记录自己试过的";
-
-const tools = [
-  { name: "AI CSS 生成器", desc: "描述你要的效果，直接输出 CSS 代码", status: "开发中" },
-  { name: "AI 配色方案", desc: "输入主题或情绪，生成完整配色 + CSS 变量", status: "开发中" },
-  { name: "AI 组件生成器", desc: "自然语言转 Tailwind + React 组件", status: "开发中" },
-  { name: "AI 代码审查", desc: "粘贴前端代码，AI 帮你找问题", status: "开发中" },
-];
-
-const articles = [
-  { tag: "实测", title: "v0 vs Cursor vs Copilot：生成 CSS 谁更准？", date: "即将发布" },
-  { tag: "教程", title: "AI 时代，哪些 CSS 知识你还是必须懂", date: "即将发布" },
-  { tag: "实战", title: "用 AI 从零做一个前端工具站，全过程记录", date: "即将发布" },
-  { tag: "思考", title: "AI 生成的代码能直接用吗？一份审查清单", date: "即将发布" },
-];
-
 const year = new Date().getFullYear();
 ---
 
@@ -26,109 +9,18 @@ const year = new Date().getFullYear();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={siteDescription} />
-    <title>{siteTitle} — {siteDescription}</title>
+    <meta name="description" content="W3Cplus — Coming Soon" />
+    <title>{siteTitle}</title>
   </head>
   <body>
     <main>
-      <!-- Hero -->
-      <section class="hero">
-        <p class="badge">2026 · 重新出发</p>
+      <div class="center">
         <h1>W3Cplus</h1>
-        <p class="tagline">{siteDescription}</p>
-        <p class="slogan">{slogan}</p>
-        <div class="hero-actions">
-          <a href="#tools" class="btn btn-primary">查看工具</a>
-          <a href="#articles" class="btn btn-ghost">阅读文章</a>
-        </div>
-      </section>
-
-      <!-- Tools -->
-      <section id="tools" class="section">
-        <div class="section-header">
-          <h2>AI 前端工具</h2>
-          <p class="section-sub">为前端开发者打造的 AI 工具，免费、免登录、即用即走</p>
-        </div>
-        <div class="tool-grid">
-          {tools.map((tool) => (
-            <div class="tool-card">
-              <div class="tool-top">
-                <span class="tool-name">{tool.name}</span>
-                <span class="tool-status">{tool.status}</span>
-              </div>
-              <p class="tool-desc">{tool.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Articles -->
-      <section id="articles" class="section">
-        <div class="section-header">
-          <h2>实战文章</h2>
-          <p class="section-sub">不搬运新闻，只写自己试过的</p>
-        </div>
-        <ul class="article-list">
-          {articles.map((article) => (
-            <li class="article-item">
-              <span class={`article-tag article-tag-${article.tag}`}>{article.tag}</span>
-              <span class="article-title">{article.title}</span>
-              <span class="article-date">{article.date}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="section">
-        <div class="section-header">
-          <h2>关于</h2>
-        </div>
-        <div class="about-content">
-          <p>
-            W3Cplus 最早是一个 Web 前端技术博客，专注 CSS3、HTML5、动画与布局。
-          </p>
-          <p>
-            2026 年，AI 正在重写前端的规则。我们带着一个新的问题回来：
-            <strong>AI 能帮前端开发者做什么，哪些东西 AI 替代不了？</strong>
-          </p>
-          <p>
-            这里会有 AI 前端工具的实测对比、实战教程、以及从 prompt 到上线的完整过程记录。
-            工具站也在开发中，目标是让前端开发者用 AI 提效，而不是被 AI 取代。
-          </p>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <div class="section-header">
-          <h2>联系</h2>
-        </div>
-        <p class="contact-text">
-          想聊合作、提建议、或反馈问题，发邮件到
-          <a href="mailto:airenliao@gmail.com">airenliao@gmail.com</a>
-        </p>
-      </section>
-
-      <footer>
-        <p>&copy; {year} {siteTitle}. Powered by Astro, deployed on Cloudflare.</p>
-      </footer>
+        <p class="coming-soon">Coming Soon</p>
+      </div>
     </main>
 
     <style>
-      :root {
-        --bg: #0a0a0a;
-        --fg: #f0f0f0;
-        --muted: #777;
-        --muted-2: #aaa;
-        --accent: #00ff88;
-        --accent-dim: #00cc6e;
-        --card-bg: #141414;
-        --card-hover: #1a1a1a;
-        --border: #222;
-        --border-hover: #333;
-      }
-
       * {
         margin: 0;
         padding: 0;
@@ -136,245 +28,44 @@ const year = new Date().getFullYear();
       }
 
       body {
-        background: var(--bg);
-        color: var(--fg);
+        background: #0a0a0a;
+        color: #f0f0f0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
           "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-        line-height: 1.7;
         -webkit-font-smoothing: antialiased;
       }
 
       main {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 0 24px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      /* Hero */
-      .hero {
-        padding: 100px 0 60px;
+      .center {
+        text-align: center;
       }
 
-      .badge {
-        display: inline-block;
-        font-size: 0.8rem;
-        color: var(--accent);
-        border: 1px solid var(--accent);
-        padding: 4px 12px;
-        border-radius: 20px;
-        margin-bottom: 28px;
-        letter-spacing: 0.05em;
-      }
-
-      .hero h1 {
-        font-size: 3.2rem;
+      h1 {
+        font-size: 4rem;
         font-weight: 800;
         letter-spacing: -0.03em;
-        margin-bottom: 12px;
+        margin-bottom: 24px;
         background: linear-gradient(135deg, #f0f0f0 0%, #00ff88 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
-      .tagline {
-        font-size: 1.4rem;
-        color: var(--fg);
-        margin-bottom: 8px;
-        font-weight: 500;
+      .coming-soon {
+        font-size: 2rem;
+        color: #555;
+        letter-spacing: 0.1em;
       }
 
-      .slogan {
-        font-size: 0.95rem;
-        color: var(--muted);
-        margin-bottom: 32px;
-      }
-
-      .hero-actions {
-        display: flex;
-        gap: 12px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 10px 24px;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: #000;
-        font-weight: 600;
-      }
-
-      .btn-primary:hover {
-        background: var(--accent-dim);
-      }
-
-      .btn-ghost {
-        border: 1px solid var(--border);
-        color: var(--muted-2);
-      }
-
-      .btn-ghost:hover {
-        border-color: var(--accent);
-        color: var(--accent);
-      }
-
-      /* Sections */
-      .section {
-        padding: 48px 0;
-        border-top: 1px solid var(--border);
-      }
-
-      .section-header {
-        margin-bottom: 28px;
-      }
-
-      .section-header h2 {
-        font-size: 1.3rem;
-        color: var(--accent);
-        margin-bottom: 6px;
-      }
-
-      .section-sub {
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
-
-      /* Tool grid */
-      .tool-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-
-      .tool-card {
-        padding: 20px;
-        background: var(--card-bg);
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        transition: border-color 0.2s, background 0.2s;
-      }
-
-      .tool-card:hover {
-        border-color: var(--border-hover);
-        background: var(--card-hover);
-      }
-
-      .tool-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 8px;
-      }
-
-      .tool-name {
-        font-weight: 600;
-        font-size: 1rem;
-      }
-
-      .tool-status {
-        font-size: 0.7rem;
-        color: var(--muted);
-        border: 1px solid var(--border);
-        padding: 2px 8px;
-        border-radius: 4px;
-      }
-
-      .tool-desc {
-        font-size: 0.85rem;
-        color: var(--muted-2);
-      }
-
-      /* Article list */
-      .article-list {
-        list-style: none;
-      }
-
-      .article-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 16px 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .article-tag {
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        border-radius: 4px;
-        border: 1px solid;
-        white-space: nowrap;
-        flex-shrink: 0;
-      }
-
-      .article-tag-实测 { color: #ff9500; border-color: #ff9500; }
-      .article-tag-教程 { color: #00ff88; border-color: #00ff88; }
-      .article-tag-实战 { color: #0a84ff; border-color: #0a84ff; }
-      .article-tag-思考 { color: #bf5af2; border-color: #bf5af2; }
-
-      .article-title {
-        font-size: 0.95rem;
-        color: var(--fg);
-        flex: 1;
-      }
-
-      .article-date {
-        font-size: 0.8rem;
-        color: var(--muted);
-        white-space: nowrap;
-      }
-
-      /* About */
-      .about-content p {
-        color: var(--muted-2);
-        margin-bottom: 16px;
-      }
-
-      .about-content strong {
-        color: var(--fg);
-      }
-
-      /* Contact */
-      .contact-text {
-        color: var(--muted-2);
-      }
-
-      .contact-text a {
-        color: var(--accent);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-        transition: border-color 0.2s;
-      }
-
-      .contact-text a:hover {
-        border-bottom-color: var(--accent);
-      }
-
-      /* Footer */
-      footer {
-        padding: 40px 0 50px;
-        border-top: 1px solid var(--border);
-        text-align: center;
-      }
-
-      footer p {
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
-
-      /* Responsive */
       @media (max-width: 640px) {
-        .hero { padding: 70px 0 40px; }
-        .hero h1 { font-size: 2.4rem; }
-        .tagline { font-size: 1.15rem; }
-        .tool-grid { grid-template-columns: 1fr; }
-        .article-item { flex-wrap: wrap; }
-        .article-date { margin-left: 0; }
+        h1 { font-size: 2.8rem; }
+        .coming-soon { font-size: 1.4rem; }
       }
     </style>
   </body>
